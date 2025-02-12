@@ -30,7 +30,7 @@ it('successful signup', function(){
     cy.url().should('eq', 'https://www.automationexercise.com/')    
 })
 
-it.only('user cannot sign up with existing email', function(){
+it('user cannot sign up with existing email', function(){
     cy.visit('/login')
     cy.get('[data-qa="signup-name"]').clear().type('Ana')
     cy.get('[data-qa="signup-email"]').clear().type('ana.qa.tester@outlook.com')
